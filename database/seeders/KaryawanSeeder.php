@@ -1,0 +1,34 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Karyawan;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
+
+class KaryawanSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        // DB::table('karyawans')->insert([
+        //     [
+        //         "nama" => "Adya Kageno", 
+        //         "alamat" => "Kalibaru"
+        //     ],
+        //     [
+        //         "nama" => "Subar", 
+        //         "alamat" => "Muncar"
+        //     ]
+        // ]);
+
+        Karyawan::insert([
+            'nama' => 'adya 2',
+            'alamat' => 'jl. jawa'
+        ]);
+    }
+}
