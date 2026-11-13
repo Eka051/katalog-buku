@@ -2,6 +2,7 @@
 
 // use App\Http\Controllers\BookController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\Mahasiswa\MahasiswaController;
 use App\Models\Karyawan;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,9 @@ Route::get('/karyawan/edit', [KaryawanController::class, 'edit'])->name('karyawa
 Route::put('/karyawan/{id}', [KaryawanController::class, 'update'])->name('karyawan.edit');
 // Untuk Menghapus
 Route::delete('/karyawan/{id}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
+
+// Route::get('/mahasiswa', function () {
+//     return view('mahasiswa.index');
+// });
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
