@@ -15,6 +15,10 @@
                 <label class="block text-gray-700 mb-1">Nama Karyawan</label>
                 <input type="text" name="nama" value="{{ old('nama') }}" class="w-full border rounded-xl p-2.5" required>
             </div>
+            <div>
+                <label class="block text-gray-700 mb-1">Alamat</label>
+                <input type="text" name="alamat" value="{{ old('alamat') }}" class="w-full border rounded-xl p-2.5" required>
+            </div>
             <div class="flex justify-end space-x-2">
                 <a href="{{ route('karyawan.index') }}" class="bg-gray-300 px-4 py-2 rounded-xl">Batal</a>
                 <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-xl">Simpan</button>

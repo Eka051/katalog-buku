@@ -15,6 +15,6 @@ class Karyawan extends Model
 
     // fillable => kolom kolom yang boleh diisi
     protected $fillable = [
-        'nama'
+        'nama', 'alamat'
     ];
 }

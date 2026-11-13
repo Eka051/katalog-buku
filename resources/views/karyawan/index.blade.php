@@ -23,6 +23,7 @@
                 <tr class="bg-gray-200 text-gray-700">
                     <th class="p-3 rounded-l-xl">No</th>
                     <th class="p-3">Nama Karyawan</th>
+                    <th class="p-3">Alamat</th>
                     <th class="p-3 rounded-r-xl text-center">Aksi</th>
                 </tr>
             </thead>
@@ -31,9 +32,10 @@
                 <tr class="border-b hover:bg-gray-50">
                     <td class="p-3">{{ $index + 1 }}</td>
                     <td class="p-3 font-medium">{{ $row->nama }}</td>
+                    <td class="p-3 font-medium">{{ $row->alamat }}</td>
                     <td class="p-3 text-center space-x-2">
-                        <a href="{{ route('karyawan.edit', $row->id) }}" class="text-blue-600 hover:underline">Edit</a>
-                        <form action="{{ route('karyawan.destroy', $row->id) }}" method="POST" class="inline">
+                        <a href="{{ route('karyawan.edit', $row->karyawan_id) }}" class="text-blue-600 hover:underline">Edit</a>
+                        <form action="{{ route('karyawan.destroy', $row->karyawan_id) }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="text-red-600 hover:underline" onclick="return confirm('Yakin mau di-delete?')">Hapus</button>
